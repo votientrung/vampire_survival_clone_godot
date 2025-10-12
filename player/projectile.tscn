@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://cr2fltjjj2id4"]
+
+[ext_resource type="Script" uid="uid://dsjpwe15po5gm" path="res://player/projectile.gd" id="1_d1ygb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_islhu"]
+size = Vector2(10, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5b1o"]
+size = Vector2(10, 10)
+
+[sub_resource type="Curve" id="Curve_d1ygb"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_islhu"]
+curve = SubResource("Curve_d1ygb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d1ygb"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector3(0, 1, 0)
+initial_velocity_min = -10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_islhu")
+color = Color(0.882444, 0.527329, 0.999999, 1)
+
+[node name="Projectile" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_d1ygb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_islhu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q5b1o")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_d1ygb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

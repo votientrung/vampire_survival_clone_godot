@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://bioph866i8d5m"]
+
+[ext_resource type="Script" uid="uid://b52bwsed1pc8l" path="res://Scipt/player.gd" id="1_y3vu3"]
+[ext_resource type="PackedScene" uid="uid://c10j3plmv4syb" path="res://player/slot.tscn" id="2_jxcr8"]
+[ext_resource type="Resource" uid="uid://b3gylfp886ox8" path="res://resouce/weapon_res/wand1.tres" id="3_p5llu"]
+[ext_resource type="Texture2D" uid="uid://brso5quhja5fc" path="res://assets/black.png" id="4_4ew4p"]
+[ext_resource type="Texture2D" uid="uid://vbitgkc6t57d" path="res://assets/blue.png" id="5_klu47"]
+[ext_resource type="Script" uid="uid://bgsikdvy7thqq" path="res://player/options.gd" id="6_klu47"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bib58"]
+size = Vector2(20, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3vu3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bib58"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ew4p"]
+radius = 60.0
+
+[node name="player_1" type="CharacterBody2D"]
+position = Vector2(161, 68)
+script = ExtResource("1_y3vu3")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="weapons" type="HBoxContainer" parent="UI"]
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 129.0
+offset_bottom = 66.0
+
+[node name="Slot" parent="UI/weapons" instance=ExtResource("2_jxcr8")]
+layout_mode = 2
+weapon = ExtResource("3_p5llu")
+
+[node name="Slot2" parent="UI/weapons" instance=ExtResource("2_jxcr8")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/weapons" instance=ExtResource("2_jxcr8")]
+layout_mode = 2
+
+[node name="XP" type="TextureProgressBar" parent="UI"]
+unique_name_in_owner = true
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 503.0
+offset_bottom = 22.0
+max_value = 60.0
+texture_under = ExtResource("4_4ew4p")
+texture_progress = ExtResource("5_klu47")
+
+[node name="level" type="Label" parent="UI/XP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 442.0
+offset_top = 23.0
+offset_right = 492.0
+offset_bottom = 72.0
+text = "lv 1
+"
+
+[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapon")]
+unique_name_in_owner = true
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("6_klu47")
+weapon = NodePath("../weapons")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_bib58")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_y3vu3")
+
+[node name="selfdamage" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="hitbox" type="CollisionShape2D" parent="selfdamage"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_bib58")
+
+[node name="HeatlhBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 23.0
+offset_bottom = -17.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="magnet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="magnet"]
+shape = SubResource("CircleShape2D_4ew4p")
+
+[connection signal="body_entered" from="selfdamage" to="." method="_on_selfdamage_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="magnet" to="." method="_on_magnet_area_entered"]

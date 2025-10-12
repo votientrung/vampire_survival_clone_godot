@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="gem" load_steps=3 format=3 uid="uid://c2gpjhfhti7eg"]
+
+[ext_resource type="Texture2D" uid="uid://1cq1ujxxlr61" path="res://assets/gems/New Piskel-2.png (4).png" id="1_bc2u7"]
+[ext_resource type="Script" uid="uid://c6pnx01xecjyx" path="res://Scipt/Gem.gd" id="2_gvtg5"]
+
+[resource]
+script = ExtResource("2_gvtg5")
+xp = 5.0
+title = "Blue gem"
+icon = ExtResource("1_bc2u7")
+descripton = ""
+metadata/_custom_type_script = "uid://c6pnx01xecjyx"
