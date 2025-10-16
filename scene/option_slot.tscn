@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckluvmimr60va"]
 
-[ext_resource type="Texture2D" uid="uid://byeuo4mo66bn8" path="res://assets/Wand01.png" id="1_wy6dr"]
+[ext_resource type="Texture2D" uid="uid://byeuo4mo66bn8" path="res://assets/Weapon/Wand01.png" id="1_wy6dr"]
 [ext_resource type="Script" uid="uid://c84gk7rr6qc37" path="res://Scipt/option_slot.gd" id="2_4tbap"]
 [ext_resource type="Texture2D" uid="uid://icjre6jntyy6" path="res://assets/PNGs/Buttons/Checkbox.png" id="3_6usok"]
 

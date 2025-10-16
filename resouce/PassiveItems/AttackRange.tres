@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=8 format=3 uid="uid://ev2wnfk2df4c"]
+
+[ext_resource type="Script" uid="uid://6m7tt2b110ga" path="res://Scipt/PassiveItem.gd" id="1_mprx0"]
+[ext_resource type="Texture2D" uid="uid://bwvbodi8utmps" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1844.png" id="2_6spwx"]
+[ext_resource type="Script" uid="uid://cxmh2aas0h8yq" path="res://Scipt/stats.gd" id="3_h538b"]
+
+[sub_resource type="Resource" id="Resource_ryat4"]
+script = ExtResource("3_h538b")
+description = "attack range +50"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 50.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_12xcf"]
+script = ExtResource("3_h538b")
+description = "attack range +75"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 75.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_cvo1t"]
+script = ExtResource("3_h538b")
+description = "attack range +100"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 100.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_5quci"]
+script = ExtResource("3_h538b")
+description = "attack range +125"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 125.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[resource]
+script = ExtResource("1_mprx0")
+upgrades = Array[ExtResource("3_h538b")]([SubResource("Resource_ryat4"), SubResource("Resource_12xcf"), SubResource("Resource_cvo1t"), SubResource("Resource_5quci")])
+title = "Auto Attack Area"
+texture = ExtResource("2_6spwx")
+metadata/_custom_type_script = "uid://6m7tt2b110ga"

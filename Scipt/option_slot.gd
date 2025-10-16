@@ -1,18 +1,23 @@
 extends TextureButton
 
-@export var weapon : Weapon :
+@export var item : Item :
 	set(value):
-		weapon = value
+		item = value
 		
-		texture_normal = value.texture
-		$Label.text = "lvl " + str(weapon.level + 1)
-		$description.text = value.upgrades[value.level-1].description
+		if value.upgrades.size() > 0 and value.upgrades.size() +1 != value.level:
+			texture_normal = value.texture
+			$Label.text = "lvl "+ str(item.level +1)
+			$description.text = value.upgrades[value.level-1].description
+		else:
+			texture_normal = value.evolution.texture
+			$Label.text =""
+			$description.text = "EVOLUTION"
 
 
 
 func _on_gui_input(event: InputEvent) :
-	if event.is_action("click") and weapon:
-		print(weapon.title)
-		weapon.updrage_item()
+	if event.is_action("click") and item:
+		print(item.title)
+		item.updrage_item()
 		get_parent().close_option()
 		

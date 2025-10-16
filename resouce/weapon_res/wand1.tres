@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=11 format=3 uid="uid://b3gylfp886ox8"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://b3gylfp886ox8"]
 
+[ext_resource type="Resource" uid="uid://vugqwiasjc5r" path="res://resouce/weapon_res/grandwand2.tres" id="1_eqrqi"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="1_sm1cw"]
+[ext_resource type="Resource" uid="uid://cucukr8r0146t" path="res://resouce/PassiveItems/magnet.tres" id="2_1wxdj"]
 [ext_resource type="Script" uid="uid://1viq5wm6u3j3" path="res://Scipt/SingleShot.gd" id="2_uprpn"]
-[ext_resource type="Texture2D" uid="uid://byeuo4mo66bn8" path="res://assets/Wand01.png" id="3_yqaq0"]
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="4_yqaq0"]
+[ext_resource type="Texture2D" uid="uid://byeuo4mo66bn8" path="res://assets/Weapon/Wand01.png" id="5_67pj0"]
 [ext_resource type="Script" uid="uid://cjhwxckwqyy8q" path="res://Scipt/ProjectileUpgrade.gd" id="5_fa1bh"]
 
 [sub_resource type="Resource" id="Resource_eqrqi"]
@@ -55,11 +57,13 @@ metadata/_custom_type_script = "uid://cjhwxckwqyy8q"
 
 [resource]
 script = ExtResource("2_uprpn")
-title = "wand1"
-texture = ExtResource("3_yqaq0")
 damage = 10.0
 speed = 300.0
 cooldown = 0.7
 projectile_node = ExtResource("1_sm1cw")
 upgrades = Array[ExtResource("4_yqaq0")]([SubResource("Resource_eqrqi"), SubResource("Resource_1wxdj"), SubResource("Resource_67pj0"), SubResource("Resource_63is2"), SubResource("Resource_t0g8n")])
+item_needed = ExtResource("2_1wxdj")
+evolution = ExtResource("1_eqrqi")
+title = "wand1"
+texture = ExtResource("5_67pj0")
 metadata/_custom_type_script = "uid://1viq5wm6u3j3"

@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=8 format=3 uid="uid://dd07r2bsoxl8l"]
+
+[ext_resource type="Script" uid="uid://6m7tt2b110ga" path="res://Scipt/PassiveItem.gd" id="1_82ocm"]
+[ext_resource type="Texture2D" uid="uid://p0h3xo4jg204" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1937.png" id="2_4vngf"]
+[ext_resource type="Script" uid="uid://cxmh2aas0h8yq" path="res://Scipt/stats.gd" id="3_y5b70"]
+
+[sub_resource type="Resource" id="Resource_oquj7"]
+script = ExtResource("3_y5b70")
+description = "speed + 25"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 25.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_kc50a"]
+script = ExtResource("3_y5b70")
+description = "speed +25"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 25.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_8njqp"]
+script = ExtResource("3_y5b70")
+description = "speed +30"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 30.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_hbgwx"]
+script = ExtResource("3_y5b70")
+description = "speed +30"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 30.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[resource]
+script = ExtResource("1_82ocm")
+upgrades = Array[ExtResource("3_y5b70")]([SubResource("Resource_oquj7"), SubResource("Resource_kc50a"), SubResource("Resource_8njqp"), SubResource("Resource_hbgwx")])
+title = "speed"
+texture = ExtResource("2_4vngf")
+metadata/_custom_type_script = "uid://6m7tt2b110ga"

@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bioph866i8d5m"]
+[gd_scene load_steps=13 format=3 uid="uid://bioph866i8d5m"]
 
 [ext_resource type="Script" uid="uid://b52bwsed1pc8l" path="res://Scipt/player.gd" id="1_y3vu3"]
 [ext_resource type="PackedScene" uid="uid://c10j3plmv4syb" path="res://player/slot.tscn" id="2_jxcr8"]
 [ext_resource type="Resource" uid="uid://b3gylfp886ox8" path="res://resouce/weapon_res/wand1.tres" id="3_p5llu"]
+[ext_resource type="PackedScene" uid="uid://bkwofoocrqtrc" path="res://player/passive_slot.tscn" id="4_4cnxy"]
 [ext_resource type="Texture2D" uid="uid://brso5quhja5fc" path="res://assets/black.png" id="4_4ew4p"]
 [ext_resource type="Texture2D" uid="uid://vbitgkc6t57d" path="res://assets/blue.png" id="5_klu47"]
+[ext_resource type="Resource" uid="uid://cucukr8r0146t" path="res://resouce/PassiveItems/magnet.tres" id="5_pdu1y"]
 [ext_resource type="Script" uid="uid://bgsikdvy7thqq" path="res://player/options.gd" id="6_klu47"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bib58"]
@@ -23,20 +25,48 @@ script = ExtResource("1_y3vu3")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="weapons" type="HBoxContainer" parent="UI"]
+[node name="Weapons" type="HBoxContainer" parent="UI"]
 offset_left = 1.0
 offset_top = 26.0
 offset_right = 129.0
 offset_bottom = 66.0
 
-[node name="Slot" parent="UI/weapons" instance=ExtResource("2_jxcr8")]
+[node name="Slot" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
-weapon = ExtResource("3_p5llu")
+item = ExtResource("3_p5llu")
 
-[node name="Slot2" parent="UI/weapons" instance=ExtResource("2_jxcr8")]
+[node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
 
-[node name="Slot3" parent="UI/weapons" instance=ExtResource("2_jxcr8")]
+[node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
+layout_mode = 2
+
+[node name="Slot5" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
+layout_mode = 2
+
+[node name="PassiveItem" type="HBoxContainer" parent="UI"]
+offset_left = 1.0
+offset_top = 72.0
+offset_right = 41.0
+offset_bottom = 112.0
+
+[node name="PassiveSlot" parent="UI/PassiveItem" instance=ExtResource("4_4cnxy")]
+layout_mode = 2
+item = ExtResource("5_pdu1y")
+
+[node name="PassiveSlot2" parent="UI/PassiveItem" instance=ExtResource("4_4cnxy")]
+layout_mode = 2
+
+[node name="PassiveSlot3" parent="UI/PassiveItem" instance=ExtResource("4_4cnxy")]
+layout_mode = 2
+
+[node name="PassiveSlot4" parent="UI/PassiveItem" instance=ExtResource("4_4cnxy")]
+layout_mode = 2
+
+[node name="PassiveSlot5" parent="UI/PassiveItem" instance=ExtResource("4_4cnxy")]
 layout_mode = 2
 
 [node name="XP" type="TextureProgressBar" parent="UI"]
@@ -59,7 +89,7 @@ offset_bottom = 72.0
 text = "lv 1
 "
 
-[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapon")]
+[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "passive_items")]
 unique_name_in_owner = true
 process_mode = 3
 anchors_preset = 8
@@ -76,7 +106,8 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("6_klu47")
-weapon = NodePath("../weapons")
+weapons = NodePath("../Weapons")
+passive_items = NodePath("../PassiveItem")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_bib58")
@@ -109,7 +140,8 @@ autostart = true
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="magnet"]
+[node name="magnet" type="CollisionShape2D" parent="magnet"]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_4ew4p")
 
 [connection signal="body_entered" from="selfdamage" to="." method="_on_selfdamage_body_entered"]

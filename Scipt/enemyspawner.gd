@@ -35,6 +35,7 @@ func spawn(pos : Vector2, elite : bool =false):
 		enemy_instance.position = pos
 		enemy_instance.player_reference = Player
 		enemy_instance.elite = elite
+		enemy_instance.damage = enemy_instance.damage * (1+Player.level/5)
 		
 		get_tree().current_scene.add_child(enemy_instance)
 	else:

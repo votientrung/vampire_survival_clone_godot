@@ -1,0 +1,150 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=14 format=3 uid="uid://ci1n285my3t53"]
+
+[ext_resource type="Script" uid="uid://6m7tt2b110ga" path="res://Scipt/PassiveItem.gd" id="1_4h0xq"]
+[ext_resource type="Texture2D" uid="uid://ktjmmnh2t371" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1812.png" id="2_8i3gs"]
+[ext_resource type="Script" uid="uid://cxmh2aas0h8yq" path="res://Scipt/stats.gd" id="3_65qn3"]
+
+[sub_resource type="Resource" id="Resource_xaboo"]
+script = ExtResource("3_65qn3")
+description = "max health +10"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_cxxv5"]
+script = ExtResource("3_65qn3")
+description = "max health +10"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_pnr27"]
+script = ExtResource("3_65qn3")
+description = "max health +10
+"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_q625s"]
+script = ExtResource("3_65qn3")
+description = "max health +10
+"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_4lq5e"]
+script = ExtResource("3_65qn3")
+description = "max health +10
+"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_e51l8"]
+script = ExtResource("3_65qn3")
+description = "max health +10
+"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_cv8ij"]
+script = ExtResource("3_65qn3")
+description = "max health +10
+"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_36wbt"]
+script = ExtResource("3_65qn3")
+description = "max health +10
+"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_bnxxh"]
+script = ExtResource("3_65qn3")
+description = "max health +10
+"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_ac58e"]
+script = ExtResource("3_65qn3")
+description = "max health +10
+"
+max_healt = 10.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[resource]
+script = ExtResource("1_4h0xq")
+upgrades = Array[ExtResource("3_65qn3")]([SubResource("Resource_xaboo"), SubResource("Resource_cxxv5"), SubResource("Resource_pnr27"), SubResource("Resource_q625s"), SubResource("Resource_4lq5e"), SubResource("Resource_e51l8"), SubResource("Resource_cv8ij"), SubResource("Resource_36wbt"), SubResource("Resource_bnxxh"), SubResource("Resource_ac58e")])
+title = "Health"
+texture = ExtResource("2_8i3gs")
+metadata/_custom_type_script = "uid://6m7tt2b110ga"

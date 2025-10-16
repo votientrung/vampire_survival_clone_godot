@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=8 format=3 uid="uid://vvqsygfxpygc"]
+
+[ext_resource type="Script" uid="uid://6m7tt2b110ga" path="res://Scipt/PassiveItem.gd" id="1_b5mj2"]
+[ext_resource type="Texture2D" uid="uid://duwto4rkqeh0c" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1814.png" id="2_cgyty"]
+[ext_resource type="Script" uid="uid://cxmh2aas0h8yq" path="res://Scipt/stats.gd" id="3_wchsw"]
+
+[sub_resource type="Resource" id="Resource_y2qeb"]
+script = ExtResource("3_wchsw")
+description = "damge deal +10%"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.1
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_b4d1c"]
+script = ExtResource("3_wchsw")
+description = "damge deal +20%"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.2
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_pcx85"]
+script = ExtResource("3_wchsw")
+description = "damge deal +20%"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.2
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_c4x6a"]
+script = ExtResource("3_wchsw")
+description = "damge deal +50%"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.5
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[resource]
+script = ExtResource("1_b5mj2")
+upgrades = Array[ExtResource("3_wchsw")]([SubResource("Resource_y2qeb"), SubResource("Resource_b4d1c"), SubResource("Resource_pcx85"), SubResource("Resource_c4x6a")])
+title = "Might"
+texture = ExtResource("2_cgyty")
+metadata/_custom_type_script = "uid://6m7tt2b110ga"

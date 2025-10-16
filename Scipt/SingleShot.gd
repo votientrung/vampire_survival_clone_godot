@@ -10,9 +10,25 @@ func shoot(source, target, scene_tree):
 	projectile.position = source.position
 	projectile.damage = damage
 	projectile.speed = speed
-	projectile.direction = (target.position - source.position).normalized()
+	projectile.source = source
+	projectile.direction = source.mouse
 	
 	scene_tree.current_scene.add_child(projectile)
 
 func activate(source, target, scene_tree):
 	shoot(source, target, scene_tree)
+
+func updrage_item():
+	if max_level_reached():
+		slot.item = evolution
+		return
+	
+	if not is_upgradable():
+		return
+	
+	var upgrade = upgrades[level -1]
+	damage += upgrade.damage
+	cooldown += upgrade.cooldown
+	speed += upgrade.speed
+	
+	level +=1
