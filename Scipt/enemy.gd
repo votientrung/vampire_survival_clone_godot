@@ -71,7 +71,11 @@ func drop_item():
 	if type.drop.size() == 0: 
 		return
 	
+	
 	var item = type.drop.pick_random()
+	
+	if elite:
+		item = load("res://resouce/pickup/chest.tres")
 	
 	var item_to_drop = drop.instantiate()
 	

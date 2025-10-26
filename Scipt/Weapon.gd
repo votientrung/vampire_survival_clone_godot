@@ -24,7 +24,7 @@ func is_upgradable() -> bool:
 		return true
 	return false
 
-func updrage_item():
+func upgrade_item():
 	if not is_upgradable():
 		return
 	

@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://du64avc4lauy5"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=7 format=3 uid="uid://du64avc4lauy5"]
 
 [ext_resource type="Script" uid="uid://du0l4h6sm1olu" path="res://Scipt/EnemyType.gd" id="1_a78pg"]
 [ext_resource type="Script" uid="uid://dfjtdd23srmrk" path="res://Scipt/pickup_resouce.gd" id="1_qvvj7"]
 [ext_resource type="Texture2D" uid="uid://bq8ne128p2wpf" path="res://assets/mob/3 v1.png" id="2_eqfq8"]
 [ext_resource type="Resource" uid="uid://cms1b75cnpuac" path="res://resouce/pickup/yellow_gem.tres" id="2_yusxv"]
 [ext_resource type="Resource" uid="uid://ept33w23n6dr" path="res://resouce/pickup/purple_gem.tres" id="3_h8dft"]
+[ext_resource type="Resource" uid="uid://135h266vnm3f" path="res://resouce/pickup/Coin.tres" id="4_yusxv"]
 
 [resource]
 script = ExtResource("1_a78pg")
@@ -13,5 +14,5 @@ texture = ExtResource("2_eqfq8")
 health = 35.0
 damage = 5.0
 speed = 50.0
-drop = Array[ExtResource("1_qvvj7")]([ExtResource("2_yusxv"), ExtResource("3_h8dft")])
+drop = Array[ExtResource("1_qvvj7")]([ExtResource("2_yusxv"), ExtResource("3_h8dft"), ExtResource("4_yusxv")])
 metadata/_custom_type_script = "uid://du0l4h6sm1olu"

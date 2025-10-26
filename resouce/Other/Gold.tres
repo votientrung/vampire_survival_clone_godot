@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Gold" load_steps=3 format=3 uid="uid://ch1bkmr88b4l7"]
+
+[ext_resource type="Script" uid="uid://bg8r2mpd4ukf1" path="res://Scipt/gold.gd" id="1_isyry"]
+[ext_resource type="Texture2D" uid="uid://b3crrvgalysxn" path="res://assets/gems/coin.png" id="2_h2jee"]
+
+[resource]
+script = ExtResource("1_isyry")
+gold = 5
+title = "Gold"
+texture = ExtResource("2_h2jee")
+metadata/_custom_type_script = "uid://bg8r2mpd4ukf1"
