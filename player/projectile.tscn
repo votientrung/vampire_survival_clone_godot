@@ -29,7 +29,7 @@ scale_curve = SubResource("CurveTexture_islhu")
 color = Color(0.882444, 0.527329, 0.999999, 1)
 
 [node name="Projectile" type="Area2D"]
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_d1ygb")
 
@@ -45,5 +45,6 @@ shape = SubResource("RectangleShape2D_q5b1o")
 amount = 100
 process_material = SubResource("ParticleProcessMaterial_d1ygb")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

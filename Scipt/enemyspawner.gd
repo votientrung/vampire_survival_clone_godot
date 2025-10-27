@@ -2,6 +2,7 @@ extends Node2D
 
 @export var Player : CharacterBody2D
 @export var Enemies : PackedScene
+@export var destructible : PackedScene
 
 var distance : float = 600
 var can_spawn : bool =true
@@ -61,3 +62,12 @@ func _on_pattern_timeout():
 func _on_elite_timeout() -> void:
 	spawn(get_random_position(),true
 	)
+
+
+func _on_destructible_timeout() -> void:
+	spawn_destructible(get_random_position())
+
+func spawn_destructible(pos):
+	var object_instance = destructible.instantiate()
+	object_instance.position = pos
+	get_tree().current_scene.add_child(object_instance)

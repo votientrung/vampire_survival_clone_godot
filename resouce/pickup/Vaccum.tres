@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PickupMagnet" load_steps=3 format=3 uid="uid://b4iuiec5y5mxs"]
+
+[ext_resource type="Texture2D" uid="uid://b4tlfhlf8cqf" path="res://assets/pickups/lFaShM(2).png" id="1_lpsbo"]
+[ext_resource type="Script" uid="uid://m8he35fhwmgr" path="res://scene/Vaccum.gd" id="2_s2pmr"]
+
+[resource]
+script = ExtResource("2_s2pmr")
+title = "Vaccum"
+icon = ExtResource("1_lpsbo")
+descripton = "Gets all the gem"
+metadata/_custom_type_script = "uid://m8he35fhwmgr"

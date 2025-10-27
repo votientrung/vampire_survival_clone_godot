@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Health" load_steps=3 format=3 uid="uid://ceb0faiac48np"]
+
+[ext_resource type="Texture2D" uid="uid://bnkpnhpspvvww" path="res://assets/pickups/+kRbWk.png" id="1_e8cov"]
+[ext_resource type="Script" uid="uid://dgt1jwgo6lb72" path="res://scene/Health.gd" id="2_m42oe"]
+
+[resource]
+script = ExtResource("2_m42oe")
+amount = 20
+title = "Sandwich"
+icon = ExtResource("1_e8cov")
+descripton = "+ 20 Health"
+metadata/_custom_type_script = "uid://dgt1jwgo6lb72"

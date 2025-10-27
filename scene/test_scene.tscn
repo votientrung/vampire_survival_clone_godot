@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://b4ukke8fi27yi"]
+[gd_scene load_steps=10 format=4 uid="uid://b4ukke8fi27yi"]
 
 [ext_resource type="Texture2D" uid="uid://br337sijupssp" path="res://assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Tiles/Tileset.png" id="1_w1wvs"]
 [ext_resource type="Texture2D" uid="uid://dcsg8kcx5pwko" path="res://assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Decorations/Decorations.png" id="2_6bffp"]
 [ext_resource type="PackedScene" uid="uid://bioph866i8d5m" path="res://player/player_1.tscn" id="3_g7awx"]
 [ext_resource type="PackedScene" uid="uid://86i4bl367o5b" path="res://scene/enemy_spawner.tscn" id="4_urr70"]
+[ext_resource type="PackedScene" uid="uid://c2aqne8ve2c24" path="res://destructible.tscn" id="5_6bffp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7cbxl"]
 texture = ExtResource("1_w1wvs")
@@ -315,6 +316,10 @@ sources/0 = SubResource("TileSetAtlasSource_buypi")
 
 [node name="test_scene" type="Node2D"]
 
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.45098, 0.407843, 0.623529, 1)
+blend_mode = 2
+
 [node name="Parallax2D" type="Parallax2D" parent="."]
 repeat_size = Vector2(1280, 720)
 
@@ -331,3 +336,7 @@ position = Vector2(318, 181)
 
 [node name="EnemySpawner" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("4_urr70")]
 Player = NodePath("../player_1")
+
+[node name="Destructible" parent="." instance=ExtResource("5_6bffp")]
+position = Vector2(1169.25, 387.75)
+scale = Vector2(1.89241, 1.57595)
