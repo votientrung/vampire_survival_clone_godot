@@ -11,6 +11,8 @@ var speed : float
 
 var drop = preload("res://scene/pickup.tscn")
 
+func _ready():
+	add_to_group("Enemy")
 
 var elite : bool = false:
 	set (value):
@@ -71,7 +73,6 @@ func drop_item():
 	if type.drop.size() == 0: 
 		return
 	
-	
 	var item = type.drop.pick_random()
 	
 	if elite:
@@ -84,3 +85,4 @@ func drop_item():
 	item_to_drop.player_reference = player_reference
 	
 	get_tree().current_scene.call_deferred("add_child", item_to_drop)
+	queue_free()
