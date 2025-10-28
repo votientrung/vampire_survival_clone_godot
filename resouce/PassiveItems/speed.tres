@@ -60,5 +60,6 @@ metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
 script = ExtResource("1_82ocm")
 upgrades = Array[ExtResource("3_y5b70")]([SubResource("Resource_oquj7"), SubResource("Resource_kc50a"), SubResource("Resource_8njqp"), SubResource("Resource_hbgwx")])
 title = "speed"
+icon = ExtResource("2_4vngf")
 texture = ExtResource("2_4vngf")
 metadata/_custom_type_script = "uid://6m7tt2b110ga"

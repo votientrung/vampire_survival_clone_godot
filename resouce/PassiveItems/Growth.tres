@@ -73,5 +73,6 @@ metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
 script = ExtResource("1_yo0fo")
 upgrades = Array[ExtResource("3_8rlqf")]([SubResource("Resource_xn7pm"), SubResource("Resource_tuxar"), SubResource("Resource_p7vsq"), SubResource("Resource_tox65"), SubResource("Resource_mn4cw")])
 title = "EXP Booster"
+icon = ExtResource("2_gw70w")
 texture = ExtResource("2_gw70w")
 metadata/_custom_type_script = "uid://6m7tt2b110ga"

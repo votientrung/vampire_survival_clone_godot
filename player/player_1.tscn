@@ -1,13 +1,17 @@
-[gd_scene load_steps=32 format=3 uid="uid://bioph866i8d5m"]
+[gd_scene load_steps=36 format=3 uid="uid://bioph866i8d5m"]
 
 [ext_resource type="Script" uid="uid://b52bwsed1pc8l" path="res://Scipt/player.gd" id="1_y3vu3"]
 [ext_resource type="PackedScene" uid="uid://c10j3plmv4syb" path="res://player/slot.tscn" id="2_jxcr8"]
 [ext_resource type="Resource" uid="uid://b3gylfp886ox8" path="res://resouce/weapon_res/wand1.tres" id="3_p5llu"]
 [ext_resource type="PackedScene" uid="uid://bkwofoocrqtrc" path="res://player/passive_slot.tscn" id="4_4cnxy"]
 [ext_resource type="Texture2D" uid="uid://brso5quhja5fc" path="res://assets/black.png" id="4_4ew4p"]
+[ext_resource type="Resource" uid="uid://dxo62x3ihn5tp" path="res://resouce/weapon_res/MagicBook.tres" id="4_737vv"]
 [ext_resource type="Texture2D" uid="uid://vbitgkc6t57d" path="res://assets/blue.png" id="5_klu47"]
+[ext_resource type="Resource" uid="uid://bvl32c4sd0rtx" path="res://resouce/weapon_res/SwordWand.tres" id="5_kuldm"]
 [ext_resource type="Resource" uid="uid://cucukr8r0146t" path="res://resouce/PassiveItems/magnet.tres" id="5_pdu1y"]
-[ext_resource type="Script" uid="uid://bgsikdvy7thqq" path="res://player/options.gd" id="6_klu47"]
+[ext_resource type="Resource" uid="uid://doqhdoc22u3ng" path="res://resouce/weapon_res/Lightning.tres" id="6_eulgu"]
+[ext_resource type="Script" uid="uid://bgsikdvy7thqq" path="res://Scipt/options.gd" id="6_klu47"]
+[ext_resource type="Resource" uid="uid://vvqsygfxpygc" path="res://resouce/PassiveItems/Might.tres" id="7_ds0s6"]
 [ext_resource type="Texture2D" uid="uid://bgy603rom2nmq" path="res://assets/PNGs/Backgrounds/BackgroundSaveMenu.png" id="9_agyb1"]
 [ext_resource type="Script" uid="uid://dexv53g0n2f0m" path="res://Scipt/chest.gd" id="10_737vv"]
 [ext_resource type="Texture2D" uid="uid://vg4701ppfhto" path="res://assets/Chest.png" id="11_ds0s6"]
@@ -166,12 +170,15 @@ item = ExtResource("3_p5llu")
 
 [node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
+item = ExtResource("4_737vv")
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
+item = ExtResource("5_kuldm")
 
 [node name="Slot4" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
+item = ExtResource("6_eulgu")
 
 [node name="Slot5" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
@@ -188,6 +195,7 @@ item = ExtResource("5_pdu1y")
 
 [node name="PassiveSlot2" parent="UI/PassiveItem" instance=ExtResource("4_4cnxy")]
 layout_mode = 2
+item = ExtResource("7_ds0s6")
 
 [node name="PassiveSlot3" parent="UI/PassiveItem" instance=ExtResource("4_4cnxy")]
 layout_mode = 2

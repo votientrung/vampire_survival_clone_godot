@@ -99,5 +99,6 @@ metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
 script = ExtResource("1_eb4xm")
 upgrades = Array[ExtResource("3_8kyjg")]([SubResource("Resource_pqo4j"), SubResource("Resource_of2pi"), SubResource("Resource_8qgha"), SubResource("Resource_nea6y"), SubResource("Resource_c07vl"), SubResource("Resource_42vc5"), SubResource("Resource_2of5m")])
 title = "recovery"
+icon = ExtResource("2_4vpcs")
 texture = ExtResource("2_4vpcs")
 metadata/_custom_type_script = "uid://6m7tt2b110ga"

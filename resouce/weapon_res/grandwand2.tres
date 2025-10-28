@@ -1,17 +1,20 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=5 format=3 uid="uid://vugqwiasjc5r"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=6 format=3 uid="uid://vugqwiasjc5r"]
 
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="1_16qdf"]
 [ext_resource type="Script" uid="uid://1viq5wm6u3j3" path="res://Scipt/SingleShot.gd" id="2_dc6kv"]
 [ext_resource type="Texture2D" uid="uid://c0ayd3ot80gnv" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1790.png" id="3_6s54e"]
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="4_84gl0"]
+[ext_resource type="Texture2D" uid="uid://c6h8kpjwnal8c" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb693.png" id="4_dc6kv"]
 
 [resource]
 script = ExtResource("2_dc6kv")
+priecing = true
 damage = 70.0
 speed = 370.0
 cooldown = 0.3
 projectile_node = ExtResource("1_16qdf")
 upgrades = Array[ExtResource("4_84gl0")]([])
 title = "Grand Wand 2"
-texture = ExtResource("3_6s54e")
+icon = ExtResource("3_6s54e")
+texture = ExtResource("4_dc6kv")
 metadata/_custom_type_script = "uid://1viq5wm6u3j3"

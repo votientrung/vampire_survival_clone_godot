@@ -1,7 +1,7 @@
 extends Weapon
-class_name SingleShot
+class_name AutoShot
 
-@export var priecing : bool 
+@export var priecing : bool
 
 
 func shoot(source, target, scene_tree):
@@ -14,12 +14,14 @@ func shoot(source, target, scene_tree):
 	projectile.damage = damage
 	projectile.speed = speed
 	projectile.source = source
-	projectile.direction = source.mouse
+	projectile.direction = (target.position - source.position).normalized()
 	
+	projectile.priecing = priecing
 	projectile.rotation = projectile.direction.angle()
+	
 	projectile.find_child("Sprite2D").texture = texture
 
-	projectile.priecing = priecing
+	
 	
 	scene_tree.current_scene.add_child(projectile)
 

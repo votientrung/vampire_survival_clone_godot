@@ -146,5 +146,6 @@ metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
 script = ExtResource("1_4h0xq")
 upgrades = Array[ExtResource("3_65qn3")]([SubResource("Resource_xaboo"), SubResource("Resource_cxxv5"), SubResource("Resource_pnr27"), SubResource("Resource_q625s"), SubResource("Resource_4lq5e"), SubResource("Resource_e51l8"), SubResource("Resource_cv8ij"), SubResource("Resource_36wbt"), SubResource("Resource_bnxxh"), SubResource("Resource_ac58e")])
 title = "Health"
+icon = ExtResource("2_8i3gs")
 texture = ExtResource("2_8i3gs")
 metadata/_custom_type_script = "uid://6m7tt2b110ga"

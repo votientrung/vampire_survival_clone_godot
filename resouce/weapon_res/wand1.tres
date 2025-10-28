@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://b3gylfp886ox8"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=14 format=3 uid="uid://b3gylfp886ox8"]
 
 [ext_resource type="Resource" uid="uid://vugqwiasjc5r" path="res://resouce/weapon_res/grandwand2.tres" id="1_eqrqi"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="1_sm1cw"]
@@ -7,30 +7,35 @@
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="4_yqaq0"]
 [ext_resource type="Texture2D" uid="uid://byeuo4mo66bn8" path="res://assets/Weapon/Wand01.png" id="5_67pj0"]
 [ext_resource type="Script" uid="uid://cjhwxckwqyy8q" path="res://Scipt/ProjectileUpgrade.gd" id="5_fa1bh"]
+[ext_resource type="Texture2D" uid="uid://bj3bbmer1ek3t" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb683.png" id="6_1wxdj"]
 
 [sub_resource type="Resource" id="Resource_eqrqi"]
 script = ExtResource("5_fa1bh")
 speed = 0.0
+priecing = true
 damage = 5.0
 cooldown = 0.0
 description = "+5dmg
-"
++priecing "
 metadata/_custom_type_script = "uid://cjhwxckwqyy8q"
 
 [sub_resource type="Resource" id="Resource_1wxdj"]
 script = ExtResource("5_fa1bh")
 speed = 20.0
+priecing = true
 damage = 5.0
 cooldown = 0.0
 description = "+5dmg
-+20spd"
++20spd
+"
 metadata/_custom_type_script = "uid://cjhwxckwqyy8q"
 
 [sub_resource type="Resource" id="Resource_67pj0"]
 script = ExtResource("5_fa1bh")
 speed = 20.0
+priecing = true
 damage = 10.0
-cooldown = -0.2
+cooldown = 0.2
 description = "+10dmg
 +20spd
 -0.2cd"
@@ -39,6 +44,7 @@ metadata/_custom_type_script = "uid://cjhwxckwqyy8q"
 [sub_resource type="Resource" id="Resource_63is2"]
 script = ExtResource("5_fa1bh")
 speed = 10.0
+priecing = true
 damage = 10.0
 cooldown = 0.0
 description = "+10dmg
@@ -48,8 +54,9 @@ metadata/_custom_type_script = "uid://cjhwxckwqyy8q"
 [sub_resource type="Resource" id="Resource_t0g8n"]
 script = ExtResource("5_fa1bh")
 speed = 10.0
+priecing = true
 damage = 20.0
-cooldown = -0.1
+cooldown = 0.1
 description = "+20dmg
 +10spd
 -o.1cd"
@@ -57,6 +64,7 @@ metadata/_custom_type_script = "uid://cjhwxckwqyy8q"
 
 [resource]
 script = ExtResource("2_uprpn")
+priecing = false
 damage = 10.0
 speed = 300.0
 cooldown = 0.7
@@ -65,5 +73,6 @@ upgrades = Array[ExtResource("4_yqaq0")]([SubResource("Resource_eqrqi"), SubReso
 item_needed = ExtResource("2_1wxdj")
 evolution = ExtResource("1_eqrqi")
 title = "wand1"
-texture = ExtResource("5_67pj0")
+icon = ExtResource("5_67pj0")
+texture = ExtResource("6_1wxdj")
 metadata/_custom_type_script = "uid://1viq5wm6u3j3"

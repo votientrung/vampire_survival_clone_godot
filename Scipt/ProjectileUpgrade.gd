@@ -3,3 +3,4 @@ class_name ProjectileUpgrade
 
 
 @export var speed : float
+@export var priecing : bool

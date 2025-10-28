@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cr2fltjjj2id4"]
 
-[ext_resource type="Script" uid="uid://dsjpwe15po5gm" path="res://player/projectile.gd" id="1_d1ygb"]
+[ext_resource type="Script" uid="uid://dsjpwe15po5gm" path="res://Scipt/projectile.gd" id="1_d1ygb"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_islhu"]
 size = Vector2(10, 10)

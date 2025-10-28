@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=6 format=3 uid="uid://b14lu1432p7l0"]
+
+[ext_resource type="Texture2D" uid="uid://ckg5ot21kdlh" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb662.png" id="1_lpwv8"]
+[ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_te1yk"]
+[ext_resource type="Script" uid="uid://f0ufa3rcrv3t" path="res://Scipt/CircularWeapon.gd" id="3_sidr2"]
+[ext_resource type="Texture2D" uid="uid://bs2ub5vfvlpiq" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb761.png" id="4_7ljym"]
+[ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="5_0qxtw"]
+
+[resource]
+script = ExtResource("3_sidr2")
+angular_speed = 300
+radius = 125
+amount = 6
+damage = 50.0
+speed = 0.0
+cooldown = 2.0
+projectile_node = ExtResource("2_te1yk")
+upgrades = Array[ExtResource("5_0qxtw")]([])
+title = "Wizard Book"
+icon = ExtResource("1_lpwv8")
+texture = ExtResource("4_7ljym")
+metadata/_custom_type_script = "uid://f0ufa3rcrv3t"

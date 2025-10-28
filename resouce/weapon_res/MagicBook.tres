@@ -1,0 +1,91 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=15 format=3 uid="uid://dxo62x3ihn5tp"]
+
+[ext_resource type="Resource" uid="uid://b14lu1432p7l0" path="res://resouce/weapon_res/WizardBook.tres" id="1_71irv"]
+[ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="1_b2bhp"]
+[ext_resource type="Script" uid="uid://f0ufa3rcrv3t" path="res://Scipt/CircularWeapon.gd" id="2_7d1j1"]
+[ext_resource type="Resource" uid="uid://vvqsygfxpygc" path="res://resouce/PassiveItems/Might.tres" id="3_ff4lw"]
+[ext_resource type="Texture2D" uid="uid://cwvlqd5x84dej" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb99.png" id="3_nue7g"]
+[ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="4_7stq3"]
+[ext_resource type="Texture2D" uid="uid://cuvdc6gykntnq" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb796.png" id="4_nue7g"]
+[ext_resource type="Script" uid="uid://c868kywe67vvv" path="res://Scipt/CircularUpgrade.gd" id="5_7d1j1"]
+
+[sub_resource type="Resource" id="Resource_nue7g"]
+script = ExtResource("5_7d1j1")
+angular_speed = 0.0
+radius = 0.0
+amount = 1.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 floating book"
+metadata/_custom_type_script = "uid://c868kywe67vvv"
+
+[sub_resource type="Resource" id="Resource_7stq3"]
+script = ExtResource("5_7d1j1")
+angular_speed = 100.0
+radius = 0.0
+amount = 0.0
+damage = 10.0
+cooldown = 0.0
+description = "+100 speed
++10 damage"
+metadata/_custom_type_script = "uid://c868kywe67vvv"
+
+[sub_resource type="Resource" id="Resource_71irv"]
+script = ExtResource("5_7d1j1")
+angular_speed = 0.0
+radius = 0.0
+amount = 1.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 floating book"
+metadata/_custom_type_script = "uid://c868kywe67vvv"
+
+[sub_resource type="Resource" id="Resource_ff4lw"]
+script = ExtResource("5_7d1j1")
+angular_speed = 100.0
+radius = 50.0
+amount = 0.0
+damage = 10.0
+cooldown = 0.0
+description = "+100 speed
++10 damage
++50 range"
+metadata/_custom_type_script = "uid://c868kywe67vvv"
+
+[sub_resource type="Resource" id="Resource_jivn1"]
+script = ExtResource("5_7d1j1")
+angular_speed = 0.0
+radius = 0.0
+amount = 1.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 floating book"
+metadata/_custom_type_script = "uid://c868kywe67vvv"
+
+[sub_resource type="Resource" id="Resource_bhp2e"]
+script = ExtResource("5_7d1j1")
+angular_speed = 0.0
+radius = 0.0
+amount = 1.0
+damage = 10.0
+cooldown = 0.0
+description = "+1 floating book
++10 damage"
+metadata/_custom_type_script = "uid://c868kywe67vvv"
+
+[resource]
+script = ExtResource("2_7d1j1")
+angular_speed = 100
+radius = 75
+amount = 1
+damage = 20.0
+speed = 0.0
+cooldown = 2.0
+projectile_node = ExtResource("1_b2bhp")
+upgrades = Array[ExtResource("4_7stq3")]([SubResource("Resource_nue7g"), SubResource("Resource_7stq3"), SubResource("Resource_71irv"), SubResource("Resource_ff4lw"), SubResource("Resource_jivn1"), SubResource("Resource_bhp2e")])
+item_needed = ExtResource("3_ff4lw")
+evolution = ExtResource("1_71irv")
+title = "Magic Book"
+icon = ExtResource("3_nue7g")
+texture = ExtResource("4_nue7g")
+metadata/_custom_type_script = "uid://f0ufa3rcrv3t"

@@ -60,5 +60,6 @@ metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
 script = ExtResource("1_mprx0")
 upgrades = Array[ExtResource("3_h538b")]([SubResource("Resource_ryat4"), SubResource("Resource_12xcf"), SubResource("Resource_cvo1t"), SubResource("Resource_5quci")])
 title = "Auto Attack Area"
+icon = ExtResource("2_6spwx")
 texture = ExtResource("2_6spwx")
 metadata/_custom_type_script = "uid://6m7tt2b110ga"

@@ -50,7 +50,7 @@ func upgrade_item(start,end):
 		else:
 			var selected_upgrade : Item
 			selected_upgrade = upgrades.pick_random()
-			rewards.get_child(index).texture = selected_upgrade.texture
+			rewards.get_child(index).texture = selected_upgrade.icon
 			selected_upgrade.upgrade_item()
 
 func clear_reward():
