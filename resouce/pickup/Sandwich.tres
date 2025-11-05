@@ -9,4 +9,5 @@ amount = 20
 title = "Sandwich"
 icon = ExtResource("1_e8cov")
 descripton = "+ 20 Health"
+weight = 5.0
 metadata/_custom_type_script = "uid://dgt1jwgo6lb72"

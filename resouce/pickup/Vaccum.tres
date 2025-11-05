@@ -8,4 +8,5 @@ script = ExtResource("2_s2pmr")
 title = "Vaccum"
 icon = ExtResource("1_lpsbo")
 descripton = "Gets all the gem"
+weight = 2.0
 metadata/_custom_type_script = "uid://m8he35fhwmgr"

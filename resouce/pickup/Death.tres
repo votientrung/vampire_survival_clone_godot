@@ -8,4 +8,5 @@ script = ExtResource("2_a2c24")
 title = "Death"
 icon = ExtResource("1_kkp3y")
 descripton = "Destroys every enemy "
+weight = 1.0
 metadata/_custom_type_script = "uid://dnus0bj3hjhe0"

@@ -1,0 +1,97 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=10 format=3 uid="uid://crbrolp160fss"]
+
+[ext_resource type="Texture2D" uid="uid://vf8fu7dmsp0m" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb160.png" id="1_kkk45"]
+[ext_resource type="Script" uid="uid://6m7tt2b110ga" path="res://Scipt/PassiveItem.gd" id="2_o4v8a"]
+[ext_resource type="Script" uid="uid://cxmh2aas0h8yq" path="res://Scipt/stats.gd" id="3_yxugb"]
+
+[sub_resource type="Resource" id="Resource_on840"]
+script = ExtResource("3_yxugb")
+description = "+0.1 luck"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.1
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_75x0f"]
+script = ExtResource("3_yxugb")
+description = "+0.1 luck"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.1
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_hl6ow"]
+script = ExtResource("3_yxugb")
+description = "+0.1 luck"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.1
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_futyh"]
+script = ExtResource("3_yxugb")
+description = "+0.2 luck"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.2
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_je77t"]
+script = ExtResource("3_yxugb")
+description = "+0.2 luck"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.2
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[sub_resource type="Resource" id="Resource_bewu7"]
+script = ExtResource("3_yxugb")
+description = "+0.3 luck"
+max_healt = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.3
+metadata/_custom_type_script = "uid://cxmh2aas0h8yq"
+
+[resource]
+script = ExtResource("2_o4v8a")
+upgrades = Array[ExtResource("3_yxugb")]([SubResource("Resource_on840"), SubResource("Resource_75x0f"), SubResource("Resource_hl6ow"), SubResource("Resource_futyh"), SubResource("Resource_je77t"), SubResource("Resource_bewu7")])
+title = "luck"
+icon = ExtResource("1_kkk45")
+texture = ExtResource("1_kkk45")
+metadata/_custom_type_script = "uid://6m7tt2b110ga"

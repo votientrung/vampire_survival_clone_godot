@@ -5,6 +5,8 @@ class_name  pickup
 @export var icon : Texture2D
 @export_multiline var descripton : String
 
+@export var weight : float
+
 var player_reference : CharacterBody2D
 
 func activates():

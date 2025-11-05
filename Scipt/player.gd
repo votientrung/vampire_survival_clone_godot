@@ -19,6 +19,7 @@ var health : float =100:
 	set(value):
 		health = max(value,0)
 		%HeatlhBar.value = value
+
 var max_health : float = 100:
 	set(value):
 		max_health = value
@@ -33,7 +34,7 @@ var magnet : float = 0 :
 		magnet = value
 		%magnet.shape.radius = 60 + value
 var growth : float =1
-
+var luck : float = 1.0
 
 var nearest_enemy
 var nearest_enemy_distance: float = 150 + area
@@ -58,6 +59,8 @@ func _physics_process(delta) :
 	move_and_collide(velocity * delta)
 	
 	health += recovery * delta
+	if health > max_health:
+		health = max_health
 
 func  take_damage(amount): 
 	health -= max(amount - armor, 0)
