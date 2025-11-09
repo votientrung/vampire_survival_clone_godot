@@ -15,6 +15,11 @@ run/main_scene="uid://b4ukke8fi27yi"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SaveData="*res://scene/save_data.tscn"
+Persistence="*res://scene/persistence.tscn"
+
 [display]
 
 window/size/viewport_width=640

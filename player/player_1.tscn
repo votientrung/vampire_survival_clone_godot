@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bioph866i8d5m"]
+[gd_scene load_steps=32 format=3 uid="uid://bioph866i8d5m"]
 
 [ext_resource type="Script" uid="uid://b52bwsed1pc8l" path="res://Scipt/player.gd" id="1_y3vu3"]
 [ext_resource type="PackedScene" uid="uid://c10j3plmv4syb" path="res://player/slot.tscn" id="2_jxcr8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bgsikdvy7thqq" path="res://Scipt/options.gd" id="6_klu47"]
 [ext_resource type="Texture2D" uid="uid://bgy603rom2nmq" path="res://assets/PNGs/Backgrounds/BackgroundSaveMenu.png" id="9_agyb1"]
 [ext_resource type="Script" uid="uid://dexv53g0n2f0m" path="res://Scipt/chest.gd" id="10_737vv"]
+[ext_resource type="Script" uid="uid://7os5tone6t0u" path="res://scene/back.gd" id="11_agyb1"]
 [ext_resource type="Texture2D" uid="uid://vg4701ppfhto" path="res://assets/Chest.png" id="11_ds0s6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40ws8"]
@@ -335,6 +336,44 @@ offset_bottom = 200.0
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Debug" type="VBoxContainer" parent="UI"]
+offset_left = 13.0
+offset_top = 144.0
+offset_right = 67.0
+offset_bottom = 221.0
+
+[node name="Might" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "M : 1"
+
+[node name="Armor" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "A : 0"
+
+[node name="Recovery" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "R : 0"
+
+[node name="Back" type="Button" parent="UI"]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = 77.0
+offset_right = 162.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back to Menu"
+script = ExtResource("11_agyb1")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_bib58")
 
@@ -372,6 +411,7 @@ shape = SubResource("CircleShape2D_4ew4p")
 
 [connection signal="pressed" from="UI/Chest/Open" to="UI/Chest" method="_on_open_pressed"]
 [connection signal="pressed" from="UI/Chest/Close" to="UI/Chest" method="_on_close_pressed"]
+[connection signal="pressed" from="UI/Back" to="UI/Back" method="_on_pressed"]
 [connection signal="body_entered" from="selfdamage" to="." method="_on_selfdamage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="magnet" to="." method="_on_magnet_area_entered"]
