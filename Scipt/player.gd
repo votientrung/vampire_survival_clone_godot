@@ -19,15 +19,26 @@ var health : float =100:
 	set(value):
 		health = max(value,0)
 		%HeatlhBar.value = value
+		if health <= 0:
+			get_tree().paused = true
 
 var max_health : float = 100:
 	set(value):
 		max_health = value
 		%HeatlhBar.max_value = value
 
-var recovery : float = 0
-var armor : float =0
-var might : float =1.5
+var recovery : float = 0:
+	set(value):
+		recovery = value
+		%Recovery.text = "R : " + str(value)
+var armor : float =0:
+	set(value):
+		armor = value
+		%Armor.text = "A : " + str(value)
+var might : float =1.5:
+	set(value):
+		might = value
+		%Might.text = "M : " + str(value)
 var area : float = 100
 var magnet : float = 0 :
 	set(value):
@@ -45,6 +56,8 @@ var gold : int =0:
 		gold = value
 		%Gold.text = "Gold : " + str(value)
 
+func _ready():
+	Persistence.gain_bonus_stats(self)
 
 func _physics_process(delta) :
 	mouse = (get_global_mouse_position() - position).normalized()
@@ -63,7 +76,7 @@ func _physics_process(delta) :
 		health = max_health
 
 func  take_damage(amount): 
-	health -= max(amount - armor, 0)
+	health -= max(amount * (amount/(amount + armor)), 1)
 
 func _on_selfdamage_body_entered(body: Node2D):
 	take_damage(body.damage)
