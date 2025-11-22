@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="MultiDamageArea" load_steps=12 format=3 uid="uid://npbxac23v0il"]
+
+[ext_resource type="Texture2D" uid="uid://b7m3pjhj6nvyv" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1351.png" id="1_repsp"]
+[ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_13pva"]
+[ext_resource type="Script" uid="uid://bfynpow3ed5ao" path="res://Scipt/MultiDamageArea.gd" id="3_6ohxj"]
+[ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="4_7ontb"]
+[ext_resource type="Script" uid="uid://bdgt6wcww3ox7" path="res://Scipt/MultiDamageAreaUpgrade.gd" id="5_13pva"]
+
+[sub_resource type="Resource" id="Resource_6ohxj"]
+script = ExtResource("5_13pva")
+amount = 1
+area = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 damage area"
+metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
+
+[sub_resource type="Resource" id="Resource_7ontb"]
+script = ExtResource("5_13pva")
+amount = 0
+area = 10.0
+damage = 5.0
+cooldown = 0.0
+description = "+10 area radius
++5 damage"
+metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
+
+[sub_resource type="Resource" id="Resource_tet1a"]
+script = ExtResource("5_13pva")
+amount = 1
+area = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 damage area"
+metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
+
+[sub_resource type="Resource" id="Resource_25lsq"]
+script = ExtResource("5_13pva")
+amount = 0
+area = 20.0
+damage = 5.0
+cooldown = 0.0
+description = "+20 area radius
++5 damage"
+metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
+
+[sub_resource type="Resource" id="Resource_xw7lq"]
+script = ExtResource("5_13pva")
+amount = 2
+area = 30.0
+damage = 0.0
+cooldown = 0.0
+description = "+2 damage area
++30 area radius"
+metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
+
+[sub_resource type="Resource" id="Resource_l8g2k"]
+script = ExtResource("5_13pva")
+amount = 3
+area = 0.0
+damage = 10.0
+cooldown = -0.5
+description = "+3 damage area
++10 damgae
+-0.5 cooldown"
+metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
+
+[resource]
+script = ExtResource("3_6ohxj")
+amount = 1
+area = 5.0
+delay = 0.2
+damage = 10.0
+speed = 0.0
+cooldown = 4.0
+projectile_node = ExtResource("2_13pva")
+upgrades = Array[ExtResource("4_7ontb")]([SubResource("Resource_6ohxj"), SubResource("Resource_7ontb"), SubResource("Resource_tet1a"), SubResource("Resource_25lsq"), SubResource("Resource_xw7lq"), SubResource("Resource_l8g2k")])
+title = "flare votex"
+icon = ExtResource("1_repsp")
+texture = ExtResource("1_repsp")
+metadata/_custom_type_script = "uid://bfynpow3ed5ao"

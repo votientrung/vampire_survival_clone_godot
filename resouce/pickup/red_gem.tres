@@ -9,4 +9,5 @@ xp = 10.0
 title = "red gem"
 icon = ExtResource("1_dinpj")
 descripton = ""
+weight = 0.0
 metadata/_custom_type_script = "uid://c6pnx01xecjyx"

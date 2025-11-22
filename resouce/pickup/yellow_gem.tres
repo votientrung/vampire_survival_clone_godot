@@ -9,4 +9,5 @@ xp = 20.0
 title = "yellow_gem"
 icon = ExtResource("1_oj005")
 descripton = ""
+weight = 0.0
 metadata/_custom_type_script = "uid://c6pnx01xecjyx"
