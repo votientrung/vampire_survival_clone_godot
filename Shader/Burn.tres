@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://df0lmtabxd61a"]
+
+[ext_resource type="Shader" uid="uid://g18xd6e5qsq5" path="res://Shader/burn.gdshader" id="1_u1qvn"]
+[ext_resource type="Texture2D" uid="uid://c2c460qk7m4tv" path="res://assets/mob/1 v1.png" id="2_6bkmq"]
+
+[resource]
+shader = ExtResource("1_u1qvn")
+shader_parameter/dissolve_texture = ExtResource("2_6bkmq")
+shader_parameter/dissolve_value = 1.0
+shader_parameter/burn_size = 0.4
+shader_parameter/ash_color = Color(0, 0, 0, 1)
+shader_parameter/burn_color = Color(3, 0.777, 0.169, 1)
+shader_parameter/proburn_color = Color(3, 0.2, 0.093, 1)

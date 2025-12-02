@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://esrxa7vvxumo"]
+
+[ext_resource type="Material" uid="uid://bfqchndrdqug7" path="res://Shader/RewardSlot.tres" id="1_k8wu7"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_left = -19.0
+offset_top = -19.0
+offset_right = 21.0
+offset_bottom = 21.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+material = ExtResource("1_k8wu7")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -45.0
+offset_right = 48.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -18,7 +18,7 @@ var elite : bool = false:
 	set (value):
 		elite = value
 		if value:
-			$Sprite2D.material = load("res://Shader/rainbow.tres")
+			$Sprite2D.material = ShaderPool.outline
 			scale = Vector2(1.5,1.5)
 			health = health*1.5
 			damage = damage*2
@@ -56,6 +56,7 @@ func damage_popup(amount, modifier = 1.0):
 	popup.text = str(amount * modifier)
 	popup.position = position + Vector2(-50,-25)
 	if modifier > 1.0:
+		ParticleFX.add_effect("blood", position)
 		popup.set("theme_override_color/font_color", Color.RED)
 	get_tree().current_scene.add_child(popup)
 
@@ -72,7 +73,6 @@ func take_damage(amount):
 	health-= amount * modifier
 	if health <= 0:
 		drop_item()
-		queue_free()
 
 func drop_item():
 	if type.drop.size() == 0: 
@@ -90,4 +90,24 @@ func drop_item():
 	item_to_drop.player_reference = player_reference
 	
 	get_tree().current_scene.call_deferred("add_child", item_to_drop)
+	
+	disable()
+	set_shader()
+	
+func set_shader_value(value: float):
+	$Sprite2D.material.set_shader_parameter("dissolve_value", value)
+	
+func set_shader():
+	
+	$Sprite2D.material = ShaderPool.burn.duplicate(true)
+	$Sprite2D.material.set_shader_parameter("dissolve_texture", type.texture)
+
+	var tween = get_tree().create_tween()
+	tween.tween_method(set_shader_value, 1.0, 0.0, 1.0)
+	await tween.finished
 	queue_free()
+	
+	
+func disable():
+	speed = 0
+	$CollisionShape2D.set_deferred("disabled", true)
