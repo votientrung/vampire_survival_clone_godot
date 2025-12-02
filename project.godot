@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 SaveData="*res://scene/save_data.tscn"
 Persistence="*res://scene/persistence.tscn"
+ParticleFX="*res://scene/particle_fx.tscn"
+ShaderPool="*res://scene/shader_pool.tscn"
 
 [display]
 

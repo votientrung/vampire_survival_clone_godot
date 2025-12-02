@@ -56,6 +56,8 @@ var gold : int =0:
 		gold = value
 		%Gold.text = "Gold : " + str(value)
 
+var distance_in_pixel : float
+
 func _ready():
 	Persistence.gain_bonus_stats(self)
 
@@ -67,9 +69,14 @@ func _physics_process(delta) :
 		nearest_enemy_distance = INF
 		nearest_enemy = null
 	
-	
+	var initial_position = position
 	velocity = Input.get_vector("left","right","up","down") * move_speed
 	move_and_collide(velocity * delta)
+	distance_in_pixel +=position.distance_to(initial_position)
+	
+	if distance_in_pixel >= 20:
+		distance_in_pixel -= 20
+		ParticleFX.add_effect("dust", position + Vector2(0,15))
 	
 	health += recovery * delta
 	if health > max_health:

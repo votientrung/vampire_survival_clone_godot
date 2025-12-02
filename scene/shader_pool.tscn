@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://cckybbknuchia"]
+
+[ext_resource type="Script" uid="uid://bxgr6mjj0oem1" path="res://scene/shader_pool.gd" id="1_fkaij"]
+[ext_resource type="Material" uid="uid://df0lmtabxd61a" path="res://Shader/Burn.tres" id="2_pwp8g"]
+[ext_resource type="Material" uid="uid://b4rtpl71fjrdd" path="res://Shader/rainbow.tres" id="3_audk2"]
+
+[node name="ShaderPool" type="Node2D"]
+script = ExtResource("1_fkaij")
+burn = ExtResource("2_pwp8g")
+outline = ExtResource("3_audk2")
