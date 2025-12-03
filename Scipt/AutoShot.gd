@@ -15,6 +15,7 @@ func shoot(source, target, scene_tree):
 	projectile.speed = speed
 	projectile.source = source
 	projectile.direction = (target.position - source.position).normalized()
+	projectile.weapon = self
 	
 	projectile.priecing = priecing
 	projectile.rotation = projectile.direction.angle()

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var character : Character
+
 var xp : int = 0:
 	set(value):
 		xp = value
@@ -60,6 +62,10 @@ var distance_in_pixel : float
 
 func _ready():
 	Persistence.gain_bonus_stats(self)
+	character = Persistence.character
+	set_base_stats(character.base_stats)
+	%Options.check_item(character.starting_weapon)
+	
 
 func _physics_process(delta) :
 	mouse = (get_global_mouse_position() - position).normalized()
@@ -78,6 +84,7 @@ func _physics_process(delta) :
 		distance_in_pixel -= 20
 		ParticleFX.add_effect("dust", position + Vector2(0,15))
 	
+	animation(delta)
 	health += recovery * delta
 	if health > max_health:
 		health = max_health
@@ -110,3 +117,28 @@ func gain_gold(amount) :
 
 func  open_chest():
 	$UI/Chest.open()
+	
+func animation(_delta):
+
+	if velocity == Vector2.ZERO:
+		$AnimationPlayer.play("idle_" + character.animation_name)
+	else:
+		$AnimationPlayer.play("run_" + character.animation_name)
+
+	if velocity.x < 0:
+		$Sprite2D.flip_h = true
+	elif velocity.x > 0:
+		$Sprite2D.flip_h = false
+		
+func set_base_stats(base_stats : Stats):
+
+	max_health += base_stats.max_health
+	recovery += base_stats.recovery
+	armor += base_stats.armor
+	move_speed += base_stats.move_speed
+	might += base_stats.might
+	area += base_stats.area
+	magnet += base_stats.magnet
+	growth += base_stats.growth
+
+	luck += base_stats.luck

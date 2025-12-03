@@ -26,6 +26,7 @@ func add_to_player(source):
 	projectile.source = source
 	projectile.scale = Vector2(area,area)
 	projectile.z_index = 0
+	projectile.weapon = self
 	
 	projectile.find_child("Sprite2D").texture = texture
 	projectile.find_child("CollisionShape2D").shape.radius = 90
@@ -35,7 +36,7 @@ func add_to_player(source):
 	source.call_deferred("add_child",projectile)
 
 func reset_collision():
-	if projectile_reference:
+	if is_instance_valid(projectile_reference):
 		projectile_reference.find_child("CollisionShape2D").disabled = true
 		projectile_reference.find_child("CollisionShape2D").disabled = false
 

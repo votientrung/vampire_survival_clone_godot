@@ -15,6 +15,7 @@ func shoot(source, target, scene_tree):
 	projectile.speed = speed
 	projectile.source = source
 	projectile.direction = source.mouse
+	projectile.weapon = self
 	
 	projectile.rotation = projectile.direction.angle()
 	projectile.find_child("Sprite2D").texture = texture

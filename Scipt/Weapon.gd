@@ -14,6 +14,7 @@ class_name Weapon
 @export var evolution : Weapon
 
 var slot
+var damage_dealt : float = 0
 
 
 func activate(_source, _target, _scene_tree):
