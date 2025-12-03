@@ -26,6 +26,7 @@ func add_to_world(source, tree):
 	projectile.source = source
 	projectile.scale = Vector2(area,area)
 	projectile.z_index = 0
+	projectile.weapon = self
 	projectile.priecing = true
 	
 	projectile.find_child("Sprite2D").texture = texture

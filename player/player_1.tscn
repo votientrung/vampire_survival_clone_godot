@@ -1,19 +1,19 @@
-[gd_scene load_steps=35 format=3 uid="uid://bioph866i8d5m"]
+[gd_scene load_steps=39 format=3 uid="uid://bioph866i8d5m"]
 
 [ext_resource type="Script" uid="uid://b52bwsed1pc8l" path="res://Scipt/player.gd" id="1_y3vu3"]
+[ext_resource type="Resource" uid="uid://0fftdlyqbxq" path="res://resouce/Character/Green Man.tres" id="2_eulgu"]
 [ext_resource type="PackedScene" uid="uid://c10j3plmv4syb" path="res://player/slot.tscn" id="2_jxcr8"]
-[ext_resource type="Resource" uid="uid://b3gylfp886ox8" path="res://resouce/weapon_res/wand1.tres" id="3_p5llu"]
 [ext_resource type="PackedScene" uid="uid://bkwofoocrqtrc" path="res://player/passive_slot.tscn" id="4_4cnxy"]
 [ext_resource type="Texture2D" uid="uid://brso5quhja5fc" path="res://assets/black.png" id="4_4ew4p"]
-[ext_resource type="Resource" uid="uid://dd1hxxusa0nbh" path="res://resouce/weapon_res/MagicField.tres" id="4_737vv"]
-[ext_resource type="Resource" uid="uid://npbxac23v0il" path="res://resouce/weapon_res/FlareVotex.tres" id="5_ds0s6"]
 [ext_resource type="Texture2D" uid="uid://vbitgkc6t57d" path="res://assets/blue.png" id="5_klu47"]
 [ext_resource type="Script" uid="uid://bgsikdvy7thqq" path="res://Scipt/options.gd" id="6_klu47"]
 [ext_resource type="Texture2D" uid="uid://bgy603rom2nmq" path="res://assets/PNGs/Backgrounds/BackgroundSaveMenu.png" id="9_agyb1"]
 [ext_resource type="Script" uid="uid://dexv53g0n2f0m" path="res://Scipt/chest.gd" id="10_737vv"]
 [ext_resource type="Script" uid="uid://7os5tone6t0u" path="res://scene/back.gd" id="11_agyb1"]
 [ext_resource type="Texture2D" uid="uid://vg4701ppfhto" path="res://assets/Chest.png" id="11_ds0s6"]
+[ext_resource type="Script" uid="uid://dd1t6f5nxmvb5" path="res://scene/report.gd" id="12_40ws8"]
 [ext_resource type="PackedScene" uid="uid://esrxa7vvxumo" path="res://scene/RewardSlot.tscn" id="13_40ws8"]
+[ext_resource type="Texture2D" uid="uid://ulrks4hi2p2a" path="res://assets/character/character.png" id="15_kuldm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40ws8"]
 atlas = ExtResource("11_ds0s6")
@@ -132,8 +132,163 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bib58"]
-size = Vector2(20, 20)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_40ws8"]
+texture = ExtResource("9_agyb1")
+region_rect = Rect2(101.875, 84.3469, 1320.85, 989.489)
+
+[sub_resource type="Animation" id="Animation_eulgu"]
+resource_name = "idle_green"
+length = 0.33335
+loop_mode = 1
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.404889),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_kuldm")]
+}
+
+[sub_resource type="Animation" id="Animation_2jifw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_kuldm")]
+}
+
+[sub_resource type="Animation" id="Animation_yu6y5"]
+resource_name = "run_green"
+length = 0.500017
+loop_mode = 1
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vp2xo"]
+_data = {
+&"RESET": SubResource("Animation_2jifw"),
+&"idle_green": SubResource("Animation_eulgu"),
+&"run_green": SubResource("Animation_yu6y5")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3vu3"]
 
@@ -145,6 +300,7 @@ radius = 60.0
 [node name="player_1" type="CharacterBody2D"]
 position = Vector2(161, 68)
 script = ExtResource("1_y3vu3")
+character = ExtResource("2_eulgu")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -158,6 +314,7 @@ text = "Gold : 0"
 horizontal_alignment = 2
 
 [node name="Weapons" type="HBoxContainer" parent="UI"]
+unique_name_in_owner = true
 offset_left = 1.0
 offset_top = 26.0
 offset_right = 129.0
@@ -165,15 +322,12 @@ offset_bottom = 66.0
 
 [node name="Slot" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
-item = ExtResource("3_p5llu")
 
 [node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
-item = ExtResource("4_737vv")
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
-item = ExtResource("5_ds0s6")
 
 [node name="Slot4" parent="UI/Weapons" instance=ExtResource("2_jxcr8")]
 layout_mode = 2
@@ -357,25 +511,97 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "R : 0"
 
-[node name="Back" type="Button" parent="UI"]
+[node name="Report" type="Panel" parent="UI"]
 process_mode = 3
-visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_40ws8")
+
+[node name="Back" type="Button" parent="UI/Report"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 231.0
+offset_top = -148.0
+offset_right = 345.0
+offset_bottom = -117.0
+grow_vertical = 0
+text = "Back to Menu"
+script = ExtResource("11_agyb1")
+
+[node name="Continue" type="Button" parent="UI/Report"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -283.0
+offset_top = -146.0
+offset_right = -204.0
+offset_bottom = -115.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Continue"
+
+[node name="Panel" type="Panel" parent="UI/Report"]
+custom_minimum_size = Vector2(420, 240)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 48.0
-offset_top = 77.0
-offset_right = 162.0
-offset_bottom = 108.0
+offset_left = -210.0
+offset_top = -120.0
+offset_right = 210.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Back to Menu"
-script = ExtResource("11_agyb1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_40ws8")
+
+[node name="Text" type="RichTextLabel" parent="UI/Report/Panel"]
+custom_minimum_size = Vector2(420, 200)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -200.0
+offset_right = 210.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+
+[node name="Status" type="Label" parent="UI/Report/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Paused"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_bib58")
+texture = ExtResource("15_kuldm")
+hframes = 3
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vp2xo")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_y3vu3")
@@ -411,7 +637,8 @@ shape = SubResource("CircleShape2D_4ew4p")
 
 [connection signal="pressed" from="UI/Chest/Open" to="UI/Chest" method="_on_open_pressed"]
 [connection signal="pressed" from="UI/Chest/Close" to="UI/Chest" method="_on_close_pressed"]
-[connection signal="pressed" from="UI/Back" to="UI/Back" method="_on_pressed"]
+[connection signal="pressed" from="UI/Report/Back" to="UI/Report/Back" method="_on_pressed"]
+[connection signal="pressed" from="UI/Report/Continue" to="UI/Report" method="_on_continue_pressed"]
 [connection signal="body_entered" from="selfdamage" to="." method="_on_selfdamage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="magnet" to="." method="_on_magnet_area_entered"]

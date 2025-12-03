@@ -23,6 +23,7 @@ func shoot(source:CharacterBody2D, scene_tree : SceneTree):
 		projectile.damage = damage
 		projectile.source = source
 		projectile.position = enemy.position
+		projectile.weapon = self
 		
 		projectile.priecing = true
 		

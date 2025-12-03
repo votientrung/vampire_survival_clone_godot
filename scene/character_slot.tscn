@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds75aph3wu65r"]
+
+[ext_resource type="Script" uid="uid://qqfjfmdidf0p" path="res://scene/character_slot.gd" id="1_0lyrg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g73v7"]
+bg_color = Color(0.262745, 0.180392, 0.215686, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.705882, 0.427451, 0.313726, 1)
+
+[node name="CharacterSlot" type="Panel"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g73v7")
+script = ExtResource("1_0lyrg")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
+
+[node name="Select" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(6, 6, 93, 6, 93, 93, 6, 93)
+closed = true
+width = 3.0
+default_color = Color(1, 0.768627, 0, 1)
+
+[connection signal="pressed" from="TextureButton" to="." method="_button_pressed"]
