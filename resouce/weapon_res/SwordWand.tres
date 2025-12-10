@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="AutoShot" load_steps=14 format=3 uid="uid://bvl32c4sd0rtx"]
+[gd_resource type="Resource" script_class="AutoShot" load_steps=17 format=3 uid="uid://bvl32c4sd0rtx"]
 
 [ext_resource type="Texture2D" uid="uid://dqjod5qlwr73x" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1795.png" id="1_31egn"]
+[ext_resource type="Resource" uid="uid://dit548nrsfksy" path="res://resouce/weapon_res/SwordSummoner.tres" id="1_xw4ti"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_b7a42"]
 [ext_resource type="Script" uid="uid://dv0rgxkhnx7dc" path="res://Scipt/AutoShot.gd" id="3_knt0e"]
+[ext_resource type="Resource" uid="uid://crbrolp160fss" path="res://resouce/PassiveItems/luck_charm.tres" id="3_ogvbo"]
+[ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/slash.tscn" id="4_b7a42"]
 [ext_resource type="Texture2D" uid="uid://cu0joqfm1ndl6" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1777.png" id="4_xw4ti"]
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="5_ogvbo"]
 [ext_resource type="Script" uid="uid://cjhwxckwqyy8q" path="res://Scipt/ProjectileUpgrade.gd" id="6_pjx3f"]
@@ -84,8 +87,11 @@ priecing = false
 damage = 10.0
 speed = 200.0
 cooldown = 2.0
+slash_node = ExtResource("4_b7a42")
 projectile_node = ExtResource("2_b7a42")
 upgrades = Array[ExtResource("5_ogvbo")]([SubResource("Resource_dlh6k"), SubResource("Resource_o1bcf"), SubResource("Resource_3dvdx"), SubResource("Resource_vpnh7"), SubResource("Resource_0o28h"), SubResource("Resource_b4s2n"), SubResource("Resource_7ink1")])
+item_needed = ExtResource("3_ogvbo")
+evolution = ExtResource("1_xw4ti")
 title = "SwordWand"
 icon = ExtResource("1_31egn")
 texture = ExtResource("4_xw4ti")

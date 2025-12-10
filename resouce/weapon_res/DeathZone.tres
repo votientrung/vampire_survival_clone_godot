@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=7 format=3 uid="uid://5p2mvfd7lgja"]
+
+[ext_resource type="Texture2D" uid="uid://nfwlwblp5cbg" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1054.png" id="1_uogwk"]
+[ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_ldrl2"]
+[ext_resource type="Script" uid="uid://q620ukj6lthc" path="res://Scipt/DamagingArea.gd" id="3_uw2x5"]
+[ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/Slash.tscn" id="4_ficxo"]
+[ext_resource type="Texture2D" uid="uid://b2ajecmmalc14" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb776.png" id="5_7c6v7"]
+[ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="6_30la3"]
+
+[resource]
+script = ExtResource("3_uw2x5")
+angular_speed = 10.0
+area = 3.0
+damage = 60.0
+speed = 0.0
+cooldown = 0.8
+slash_node = ExtResource("4_ficxo")
+projectile_node = ExtResource("2_ldrl2")
+upgrades = Array[ExtResource("6_30la3")]([])
+title = "Death Zone"
+icon = ExtResource("1_uogwk")
+texture = ExtResource("5_7c6v7")
+metadata/_custom_type_script = "uid://q620ukj6lthc"

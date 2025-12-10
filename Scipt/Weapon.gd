@@ -7,6 +7,7 @@ class_name Weapon
 @export var speed : float
 @export var cooldown : float
 
+@export var slash_node : PackedScene = preload("res://player/Slash.tscn")
 @export var projectile_node : PackedScene = preload("res://player/projectile.tscn")
 
 @export var upgrades : Array[Upgrade]

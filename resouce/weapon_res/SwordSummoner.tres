@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AutoShot" load_steps=7 format=3 uid="uid://dit548nrsfksy"]
+
+[ext_resource type="Texture2D" uid="uid://5s1l2tyq7nrp" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1808.png" id="1_wkfb6"]
+[ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_uo3jk"]
+[ext_resource type="Script" uid="uid://dv0rgxkhnx7dc" path="res://Scipt/AutoShot.gd" id="3_ebh3t"]
+[ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/Slash.tscn" id="4_702pp"]
+[ext_resource type="Texture2D" uid="uid://cl06m7k62am2e" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1721.png" id="5_gna1g"]
+[ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="6_rb6a3"]
+
+[resource]
+script = ExtResource("3_ebh3t")
+priecing = true
+damage = 50.0
+speed = 350.0
+cooldown = 0.5
+slash_node = ExtResource("4_702pp")
+projectile_node = ExtResource("2_uo3jk")
+upgrades = Array[ExtResource("6_rb6a3")]([])
+title = "SwordSummoner"
+icon = ExtResource("1_wkfb6")
+texture = ExtResource("5_gna1g")
+metadata/_custom_type_script = "uid://dv0rgxkhnx7dc"

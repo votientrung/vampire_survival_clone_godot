@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="MultiDamageArea" load_steps=12 format=3 uid="uid://npbxac23v0il"]
+[gd_resource type="Resource" script_class="MultiDamageArea" load_steps=13 format=3 uid="uid://npbxac23v0il"]
 
 [ext_resource type="Texture2D" uid="uid://b7m3pjhj6nvyv" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1351.png" id="1_repsp"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_13pva"]
 [ext_resource type="Script" uid="uid://bfynpow3ed5ao" path="res://Scipt/MultiDamageArea.gd" id="3_6ohxj"]
+[ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/Slash.tscn" id="4_6ohxj"]
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="4_7ontb"]
 [ext_resource type="Script" uid="uid://bdgt6wcww3ox7" path="res://Scipt/MultiDamageAreaUpgrade.gd" id="5_13pva"]
 
@@ -73,6 +74,7 @@ delay = 0.2
 damage = 10.0
 speed = 0.0
 cooldown = 4.0
+slash_node = ExtResource("4_6ohxj")
 projectile_node = ExtResource("2_13pva")
 upgrades = Array[ExtResource("4_7ontb")]([SubResource("Resource_6ohxj"), SubResource("Resource_7ontb"), SubResource("Resource_tet1a"), SubResource("Resource_25lsq"), SubResource("Resource_xw7lq"), SubResource("Resource_l8g2k")])
 title = "flare votex"

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy0p0j2xybh6j"]
+
+[ext_resource type="Script" uid="uid://dfuwxrx7y0h6d" path="res://Scipt/slash.gd" id="1_fo1bg"]
+[ext_resource type="Texture2D" uid="uid://c3mu4b3d107r8" path="res://assets/Weapon/AxeSlashEffect (4).png" id="1_r7w5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a367"]
+
+[node name="slash" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_fo1bg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6a367")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.62981, 0.5)
+scale = Vector2(0.288397, 0.273333)
+texture = ExtResource("1_r7w5r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cxmh2aas0h8yq" path="res://Scipt/stats.gd" id="1_pyo8x"]
 [ext_resource type="Texture2D" uid="uid://cpm8qmyl2ovlr" path="res://assets/character/GreenMan5.png" id="2_pyo8x"]
 [ext_resource type="Script" uid="uid://bv1ar7wr2twr" path="res://scene/Character.gd" id="3_awpor"]
-[ext_resource type="Resource" uid="uid://dd1hxxusa0nbh" path="res://resouce/weapon_res/MagicField.tres" id="4_pyo8x"]
+[ext_resource type="Resource" uid="uid://b3gylfp886ox8" path="res://resouce/weapon_res/wand1.tres" id="4_pyo8x"]
 
 [sub_resource type="Resource" id="Resource_svlr2"]
 script = ExtResource("1_pyo8x")
