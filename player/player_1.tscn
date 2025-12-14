@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bioph866i8d5m"]
+[gd_scene load_steps=41 format=3 uid="uid://bioph866i8d5m"]
 
 [ext_resource type="Script" uid="uid://b52bwsed1pc8l" path="res://Scipt/player.gd" id="1_y3vu3"]
 [ext_resource type="Resource" uid="uid://0fftdlyqbxq" path="res://resouce/Character/Green Man.tres" id="2_eulgu"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://vg4701ppfhto" path="res://assets/Chest.png" id="11_ds0s6"]
 [ext_resource type="Script" uid="uid://dd1t6f5nxmvb5" path="res://scene/report.gd" id="12_40ws8"]
 [ext_resource type="PackedScene" uid="uid://esrxa7vvxumo" path="res://scene/RewardSlot.tscn" id="13_40ws8"]
+[ext_resource type="Script" uid="uid://umugse4h1sxf" path="res://player/game_over.gd" id="14_eulgu"]
+[ext_resource type="PackedScene" uid="uid://csirgd4hx3pcb" path="res://scene/main_menu.tscn" id="15_2jifw"]
 [ext_resource type="Texture2D" uid="uid://ulrks4hi2p2a" path="res://assets/character/character.png" id="15_kuldm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40ws8"]
@@ -594,6 +596,61 @@ grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Paused"
 
+[node name="GameOver" type="Control" parent="UI"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_eulgu")
+main_menu_scene = ExtResource("15_2jifw")
+
+[node name="Panel" type="Panel" parent="UI/GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -40.0
+offset_right = 75.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/GameOver/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -11.5
+offset_right = 46.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="UI/GameOver/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = 64.0
+offset_right = 56.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return Menu"
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("15_kuldm")
 hframes = 3
@@ -640,6 +697,7 @@ shape = SubResource("CircleShape2D_4ew4p")
 [connection signal="pressed" from="UI/Chest/Close" to="UI/Chest" method="_on_close_pressed"]
 [connection signal="pressed" from="UI/Report/Back" to="UI/Report/Back" method="_on_pressed"]
 [connection signal="pressed" from="UI/Report/Continue" to="UI/Report" method="_on_continue_pressed"]
+[connection signal="pressed" from="UI/GameOver/Panel/Button" to="UI/GameOver" method="_on_button_pressed"]
 [connection signal="body_entered" from="selfdamage" to="." method="_on_selfdamage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="magnet" to="." method="_on_magnet_area_entered"]
