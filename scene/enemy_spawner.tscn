@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqlbhfy0oo8to" path="res://Scipt/enemyspawner.gd" id="1_00s5r"]
 [ext_resource type="PackedScene" uid="uid://dwynd2ji0kgvf" path="res://enemies/enemy.tscn" id="2_63vqd"]
-[ext_resource type="PackedScene" uid="uid://c2aqne8ve2c24" path="res://player/destructible.tscn" id="3_s2qmi"]
+[ext_resource type="PackedScene" uid="uid://c2aqne8ve2c24" path="res://destructible.tscn" id="3_s2qmi"]
 [ext_resource type="Script" uid="uid://du0l4h6sm1olu" path="res://Scipt/EnemyType.gd" id="3_x8ooj"]
 [ext_resource type="Resource" uid="uid://du8b4k57q7wu1" path="res://resouce/mob_res/eyes.tres" id="4_nmoyu"]
 [ext_resource type="Resource" uid="uid://dyc1xuqopyfme" path="res://resouce/mob_res/eyes_ghost.tres" id="5_x1605"]

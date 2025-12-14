@@ -17,12 +17,12 @@ var level : int =1 :
 			%XP.max_value += 20
 
 var move_speed : float = 150
-var health : float =100:
+var health : float = 10:
 	set(value):
 		health = max(value,0)
 		%HeatlhBar.value = value
 		if health <= 0:
-			get_tree().paused = true
+			die()
 
 var max_health : float = 100:
 	set(value):
@@ -59,6 +59,8 @@ var gold : int =0:
 		%Gold.text = "Gold : " + str(value)
 
 var distance_in_pixel : float
+
+var is_dead := false
 
 func _ready():
 	Persistence.gain_bonus_stats(self)
@@ -142,3 +144,11 @@ func set_base_stats(base_stats : Stats):
 	growth += base_stats.growth
 
 	luck += base_stats.luck
+
+func die():
+	if is_dead:
+		return
+	is_dead = true
+	
+	get_tree().paused = true
+	$UI/GameOver.show()
