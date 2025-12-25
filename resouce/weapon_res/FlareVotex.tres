@@ -19,10 +19,10 @@ metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
 [sub_resource type="Resource" id="Resource_7ontb"]
 script = ExtResource("5_13pva")
 amount = 0
-area = 10.0
+area = 0.2
 damage = 5.0
 cooldown = 0.0
-description = "+10 area radius
+description = "+20% area radius
 +5 damage"
 metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
 
@@ -38,21 +38,22 @@ metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
 [sub_resource type="Resource" id="Resource_25lsq"]
 script = ExtResource("5_13pva")
 amount = 0
-area = 20.0
+area = 0.3
 damage = 5.0
 cooldown = 0.0
-description = "+20 area radius
+description = "+30% area radius
 +5 damage"
 metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
 
 [sub_resource type="Resource" id="Resource_xw7lq"]
 script = ExtResource("5_13pva")
 amount = 2
-area = 30.0
+area = 0.5
 damage = 0.0
 cooldown = 0.0
-description = "+2 damage area
-+30 area radius"
+description = "+50% area radius
++2 damage area
+"
 metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
 
 [sub_resource type="Resource" id="Resource_l8g2k"]
@@ -69,7 +70,7 @@ metadata/_custom_type_script = "uid://bdgt6wcww3ox7"
 [resource]
 script = ExtResource("3_6ohxj")
 amount = 1
-area = 5.0
+area = 2.0
 delay = 0.2
 damage = 10.0
 speed = 0.0

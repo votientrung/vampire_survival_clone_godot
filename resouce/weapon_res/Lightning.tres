@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bvgifgyxkr22g" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1300.png" id="1_w1s5c"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_itimr"]
 [ext_resource type="Script" uid="uid://dogwgh8reaams" path="res://Scipt/Lightning.gd" id="3_1qq11"]
-[ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/slash.tscn" id="4_1qq11"]
+[ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/Slash.tscn" id="4_1qq11"]
 [ext_resource type="Texture2D" uid="uid://bw18sa6daimng" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/64x64/fc1025.png" id="4_w1s5c"]
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="5_ma78w"]
 [ext_resource type="Script" uid="uid://b8b3icoy0jrgp" path="res://Scipt/LightningUpgrade.gd" id="6_itimr"]

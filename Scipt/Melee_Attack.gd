@@ -30,9 +30,6 @@ func upgrade_item():
 	var upgrade = upgrades[level -1]
 	damage += upgrade.damage
 	cooldown -= upgrade.cooldown
-	if cooldown < slash_node.duration:
-		cooldown = slash_node.duration
-	speed += upgrade.speed
 	scale += upgrade.scale
 	
 	level +=1

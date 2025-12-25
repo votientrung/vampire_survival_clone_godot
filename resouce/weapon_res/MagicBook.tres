@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="4_7stq3"]
 [ext_resource type="Texture2D" uid="uid://cuvdc6gykntnq" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb796.png" id="4_nue7g"]
 [ext_resource type="Script" uid="uid://c868kywe67vvv" path="res://Scipt/CircularUpgrade.gd" id="5_7d1j1"]
-[ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/slash.tscn" id="6_ff4lw"]
+[ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/Slash.tscn" id="6_ff4lw"]
 
 [sub_resource type="Resource" id="Resource_nue7g"]
 script = ExtResource("5_7d1j1")
