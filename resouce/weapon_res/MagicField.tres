@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DamagingArea" load_steps=17 format=3 uid="uid://dd1hxxusa0nbh"]
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=18 format=3 uid="uid://dd1hxxusa0nbh"]
 
 [ext_resource type="Texture2D" uid="uid://b2x4kkkqbcu18" path="res://assets/Weapon/2.png" id="1_ee1eg"]
 [ext_resource type="Resource" uid="uid://5p2mvfd7lgja" path="res://resouce/weapon_res/DeathZone.tres" id="1_u58kq"]
@@ -16,6 +16,14 @@ region = Rect2(0, 0, 70, 69.5)
 [sub_resource type="AtlasTexture" id="AtlasTexture_j66k8"]
 atlas = ExtResource("1_ee1eg")
 region = Rect2(0, 0, 73, 72.5)
+
+[sub_resource type="Resource" id="Resource_e6brk"]
+script = ExtResource("5_x0xr5")
+area = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "A magic fied that binding with you"
+metadata/_custom_type_script = "uid://c7iwtiuq5o2me"
 
 [sub_resource type="Resource" id="Resource_j66k8"]
 script = ExtResource("5_x0xr5")
@@ -81,7 +89,7 @@ speed = 0.0
 cooldown = 1.5
 slash_node = ExtResource("4_j66k8")
 projectile_node = ExtResource("2_x0xr5")
-upgrades = Array[ExtResource("4_e5e0s")]([SubResource("Resource_j66k8"), SubResource("Resource_e5e0s"), SubResource("Resource_u58kq"), SubResource("Resource_es1d2"), SubResource("Resource_v1ie2"), SubResource("Resource_llbs1")])
+upgrades = Array[ExtResource("4_e5e0s")]([SubResource("Resource_e6brk"), SubResource("Resource_j66k8"), SubResource("Resource_e5e0s"), SubResource("Resource_u58kq"), SubResource("Resource_es1d2"), SubResource("Resource_v1ie2"), SubResource("Resource_llbs1")])
 item_needed = ExtResource("3_es1d2")
 evolution = ExtResource("1_u58kq")
 title = "MagicField"

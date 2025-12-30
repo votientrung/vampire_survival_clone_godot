@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Lightning" load_steps=15 format=3 uid="uid://doqhdoc22u3ng"]
+[gd_resource type="Resource" script_class="Lightning" load_steps=16 format=3 uid="uid://doqhdoc22u3ng"]
 
 [ext_resource type="Texture2D" uid="uid://bvgifgyxkr22g" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb1300.png" id="1_w1s5c"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_itimr"]
@@ -7,6 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://bw18sa6daimng" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/64x64/fc1025.png" id="4_w1s5c"]
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="5_ma78w"]
 [ext_resource type="Script" uid="uid://b8b3icoy0jrgp" path="res://Scipt/LightningUpgrade.gd" id="6_itimr"]
+
+[sub_resource type="Resource" id="Resource_qftb1"]
+script = ExtResource("6_itimr")
+amount = 0
+damage = 0.0
+cooldown = 0.0
+description = "Summon lightning to deal damage"
+metadata/_custom_type_script = "uid://b8b3icoy0jrgp"
 
 [sub_resource type="Resource" id="Resource_1qq11"]
 script = ExtResource("6_itimr")
@@ -76,7 +84,7 @@ speed = 0.0
 cooldown = 4.0
 slash_node = ExtResource("4_1qq11")
 projectile_node = ExtResource("2_itimr")
-upgrades = Array[ExtResource("5_ma78w")]([SubResource("Resource_1qq11"), SubResource("Resource_cskur"), SubResource("Resource_ma78w"), SubResource("Resource_16xxx"), SubResource("Resource_rnsro"), SubResource("Resource_m82gv"), SubResource("Resource_ypsj3")])
+upgrades = Array[ExtResource("5_ma78w")]([SubResource("Resource_qftb1"), SubResource("Resource_1qq11"), SubResource("Resource_cskur"), SubResource("Resource_ma78w"), SubResource("Resource_16xxx"), SubResource("Resource_rnsro"), SubResource("Resource_m82gv"), SubResource("Resource_ypsj3")])
 title = "Lightning"
 icon = ExtResource("1_w1s5c")
 texture = ExtResource("4_w1s5c")

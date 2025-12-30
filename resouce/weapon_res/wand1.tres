@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=15 format=3 uid="uid://b3gylfp886ox8"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=16 format=3 uid="uid://b3gylfp886ox8"]
 
 [ext_resource type="Resource" uid="uid://vugqwiasjc5r" path="res://resouce/weapon_res/grandwand2.tres" id="1_eqrqi"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="1_sm1cw"]
@@ -9,6 +9,15 @@
 [ext_resource type="Script" uid="uid://cjhwxckwqyy8q" path="res://Scipt/ProjectileUpgrade.gd" id="5_fa1bh"]
 [ext_resource type="Texture2D" uid="uid://bj3bbmer1ek3t" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb683.png" id="6_1wxdj"]
 [ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/Slash.tscn" id="6_67pj0"]
+
+[sub_resource type="Resource" id="Resource_s8cu6"]
+script = ExtResource("5_fa1bh")
+speed = 0.0
+priecing = false
+damage = 0.0
+cooldown = 0.0
+description = "shooting magic star to enemies"
+metadata/_custom_type_script = "uid://cjhwxckwqyy8q"
 
 [sub_resource type="Resource" id="Resource_eqrqi"]
 script = ExtResource("5_fa1bh")
@@ -71,7 +80,7 @@ speed = 200.0
 cooldown = 0.7
 slash_node = ExtResource("6_67pj0")
 projectile_node = ExtResource("1_sm1cw")
-upgrades = Array[ExtResource("4_yqaq0")]([SubResource("Resource_eqrqi"), SubResource("Resource_1wxdj"), SubResource("Resource_67pj0"), SubResource("Resource_63is2"), SubResource("Resource_t0g8n")])
+upgrades = Array[ExtResource("4_yqaq0")]([SubResource("Resource_s8cu6"), SubResource("Resource_eqrqi"), SubResource("Resource_1wxdj"), SubResource("Resource_67pj0"), SubResource("Resource_63is2"), SubResource("Resource_t0g8n")])
 item_needed = ExtResource("2_1wxdj")
 evolution = ExtResource("1_eqrqi")
 title = "wand1"

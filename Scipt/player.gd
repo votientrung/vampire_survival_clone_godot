@@ -12,9 +12,7 @@ var level : int =1 :
 		level = value
 		%level.text = "LV " + str(value)
 		%Options.show_option()
-		
-		if (level % 5) == 0:
-			%XP.max_value += 20
+		%XP.max_value += %XP.max_value/4 * (1 + level/5)
 
 var move_speed : float = 150
 var health : float = 10:
@@ -67,7 +65,7 @@ func _ready():
 	character = Persistence.character
 	set_base_stats(character.base_stats)
 	%Options.check_item(character.starting_weapon)
-	
+	$UI/Weapons/Slot.item.upgrade_item()
 
 func _physics_process(delta) :
 	mouse = (get_global_mouse_position() - position).normalized()

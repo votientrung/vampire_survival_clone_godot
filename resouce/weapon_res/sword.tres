@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Melee_attack" load_steps=13 format=3 uid="uid://i7qh3n042aby"]
+[gd_resource type="Resource" script_class="Melee_attack" load_steps=14 format=3 uid="uid://i7qh3n042aby"]
 
 [ext_resource type="Texture2D" uid="uid://whhab6ge3ycy" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb155.png" id="1_fb244"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="2_8sctd"]
@@ -6,6 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/Slash.tscn" id="4_p1v0h"]
 [ext_resource type="Script" uid="uid://b7cc7helxqvrl" path="res://Scipt/upgrade.gd" id="5_srnnk"]
 [ext_resource type="Script" uid="uid://gll35mxlm25u" path="res://Scipt/Melee_attack_upgrade.gd" id="6_8sctd"]
+
+[sub_resource type="Resource" id="Resource_8sctd"]
+script = ExtResource("6_8sctd")
+scale = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "attack close enemies"
+metadata/_custom_type_script = "uid://gll35mxlm25u"
 
 [sub_resource type="Resource" id="Resource_5u0p7"]
 script = ExtResource("6_8sctd")
@@ -68,7 +76,7 @@ speed = 0.0
 cooldown = 1.0
 slash_node = ExtResource("4_p1v0h")
 projectile_node = ExtResource("2_8sctd")
-upgrades = Array[ExtResource("5_srnnk")]([SubResource("Resource_5u0p7"), SubResource("Resource_p1v0h"), SubResource("Resource_srnnk"), SubResource("Resource_qmukm"), SubResource("Resource_6p6lr"), SubResource("Resource_ddu8j")])
+upgrades = Array[ExtResource("5_srnnk")]([SubResource("Resource_8sctd"), SubResource("Resource_5u0p7"), SubResource("Resource_p1v0h"), SubResource("Resource_srnnk"), SubResource("Resource_qmukm"), SubResource("Resource_6p6lr"), SubResource("Resource_ddu8j")])
 title = "sword"
 icon = ExtResource("1_fb244")
 texture = ExtResource("1_fb244")

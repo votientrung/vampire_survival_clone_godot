@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Circular" load_steps=16 format=3 uid="uid://dxo62x3ihn5tp"]
+[gd_resource type="Resource" script_class="Circular" load_steps=17 format=3 uid="uid://dxo62x3ihn5tp"]
 
 [ext_resource type="Resource" uid="uid://b14lu1432p7l0" path="res://resouce/weapon_res/WizardBook.tres" id="1_71irv"]
 [ext_resource type="PackedScene" uid="uid://cr2fltjjj2id4" path="res://player/projectile.tscn" id="1_b2bhp"]
@@ -9,6 +9,16 @@
 [ext_resource type="Texture2D" uid="uid://cuvdc6gykntnq" path="res://assets/Weapon/Free - Raven Fantasy Icons/Separated Files/32x32/fb796.png" id="4_nue7g"]
 [ext_resource type="Script" uid="uid://c868kywe67vvv" path="res://Scipt/CircularUpgrade.gd" id="5_7d1j1"]
 [ext_resource type="PackedScene" uid="uid://cy0p0j2xybh6j" path="res://player/Slash.tscn" id="6_ff4lw"]
+
+[sub_resource type="Resource" id="Resource_ttxpr"]
+script = ExtResource("5_7d1j1")
+angular_speed = 0.0
+radius = 0.0
+amount = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "summon books that flying around you"
+metadata/_custom_type_script = "uid://c868kywe67vvv"
 
 [sub_resource type="Resource" id="Resource_nue7g"]
 script = ExtResource("5_7d1j1")
@@ -84,7 +94,7 @@ speed = 0.0
 cooldown = 2.0
 slash_node = ExtResource("6_ff4lw")
 projectile_node = ExtResource("1_b2bhp")
-upgrades = Array[ExtResource("4_7stq3")]([SubResource("Resource_nue7g"), SubResource("Resource_7stq3"), SubResource("Resource_71irv"), SubResource("Resource_ff4lw"), SubResource("Resource_jivn1"), SubResource("Resource_bhp2e")])
+upgrades = Array[ExtResource("4_7stq3")]([SubResource("Resource_ttxpr"), SubResource("Resource_nue7g"), SubResource("Resource_7stq3"), SubResource("Resource_71irv"), SubResource("Resource_ff4lw"), SubResource("Resource_jivn1"), SubResource("Resource_bhp2e")])
 item_needed = ExtResource("3_ff4lw")
 evolution = ExtResource("1_71irv")
 title = "Magic Book"
